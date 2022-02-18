@@ -485,9 +485,10 @@ function lib:Window(text, preset, closebind)
             Tab.CanvasSize = UDim2.new(0, 0, 0, TabLayout.AbsoluteContentSize.Y)
         end
         function tabcontent:DestroyDropdowns()
-            local childrenInBasement = Tab:GetChildren()
-            if childrenInBasement.Name == "Dropdown" then
-                childrenInBasement:Destroy()
+            for i,v in pairs(Tab:GetChildren()) do
+                if v.Name == "Dropdown" then
+                    v:Destroy()
+                end
             end
         end
         function tabcontent:Toggle(text,default, callback)
