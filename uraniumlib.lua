@@ -1497,8 +1497,9 @@ function lib:Window(text, preset, closebind)
             LabelTitle.BackgroundTransparency = 1.000
             LabelTitle.Position = UDim2.new(0.0358126722, 0, 0, 0)
             LabelTitle.Size = UDim2.new(0, 187, 0, 42)
-            LabelTitle.Font = Enum.Font.SourceSansItalic
-            LabelTitle.Text = text
+            LabelTitle.Font = Enum.Font.Gotham
+            LabelTitle.RichText = true
+            LabelTitle.Text = [[<i>text</i>]]
             LabelTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
             LabelTitle.TextSize = 14.000
             LabelTitle.TextXAlignment = Enum.TextXAlignment.Left
